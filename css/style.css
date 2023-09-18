@@ -1,0 +1,42 @@
+.parent-container {
+    position: relative;
+    width: 1300px;
+    height: 1000px;
+}
+
+.hover-container {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    z-index: 10; 
+}
+
+.parent-container.active #map {
+    filter: blur(5px);
+}
+
+
+.hover-text {
+    cursor: pointer;
+    font-size: 24px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease; 
+}
+
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 1150px;
+    height: 500px;
+    z-index: 20; 
+}
+
+.hover-container:hover .hover-image {
+    display: block;
+}
+
+.hover-container:hover .hover-text {
+    transform: scale(1.1);
+}
